@@ -29,7 +29,9 @@
 display: inline;
 }
 
-h3{
+h6{
   color: #226b80;
-  font-size: 16px;
+}
+
+#title {
 }
