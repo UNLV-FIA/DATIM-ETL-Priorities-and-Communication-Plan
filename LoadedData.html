@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>DATIM ETL Priorities and Plan</title>
@@ -10,470 +11,1290 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="">DATIM</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="">DATIM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="LoadedData.html">Loaded Data</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="LoadedData.html">Loaded Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  <div>
-<div class="ml-4">
-<h1>DATIM ETL Priorities and Communication Plan</h1>
-<h2>Loaded Data</h2>
-<h6><i>Last updated: 10/21/19</i></h6>
-<p>
-  Based on the <a href= "https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd593201.pdf">Plan Revision Statuses for NFS</a>, the DATIM DataMart team started ETL'ing
-  data for states based on these priorities (i.e., "Needs (older than 15 years)", "Needs soon
-  (10-15 years old)", "Under Revision", and "Revised within 10 years"). </p>
+<div>
+  <div class="ml-4">
+    <h1>DATIM ETL Priorities and Communication Plan</h1>
+    <h2>Loaded Data</h2>
+    <h6><i>Last updated: 12/17/19</i></h6>
+    <p>
+      Based on the <a href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd593201.pdf">Plan Revision Statuses for NFS</a>, the DATIM DataMart team started ETL'ing
+      data for states based on these priorities (i.e., "Needs (older than 15 years)", "Needs soon
+      (10-15 years old)", "Under Revision", and "Revised within 10 years"). </p>
 
     <p>The following table contains the information
-  for the data that has been ETL'd based on these needs. The table contains the state, inventory year(s) loaded, and
-  date the data loaded.
-  </p>
-
-  <p>
-    Whenever a new state is loaded/reloaded to the DATIM DataMart, it will be
-    added to the table below.
+      for the data that has been ETL'd based on these needs. The table contains the state, inventory year(s) loaded, and
+      date the data loaded.
     </p>
-<hr>
 
-<br />
-  <body>
-    <table>
-      <tr>
-        <th>State</th>
-        <th>Inventory Year(s)</th>
-        <th>Date Loaded</th>
-        <th>Data Included in ETL (Evaluation Group Description) </th>
-      </tr>
+    <p>
+      Whenever a new state is loaded/reloaded to the DATIM DataMart, it will be
+      added to the table below.
+    </p>
+    <hr>
+  </div>
 
-      <tr>
-        <td>Alabama</td>
-        <td>2000-2019</td>
-        <td> 09/30/19 </td>
-        <td><ul>
-          <li>ALABAMA 2000: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY </li>
-          <li>ALABAMA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>ALABAMA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-            <li>ALABAMA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>ALABAMA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>ALABAMA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ALABAMA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ALABAMA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ALABAMA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ALABAMA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ALABAMA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ALABAMA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ALABAMA 2019: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        </ul></td>
-      </tr>
+  <div class="ml-4" class="container">
 
-      <tr>
-        <td>Alaska</td>
-        <td>2004-2016</td>
-        <td>05/02/19</td>
-      </tr>
+    <body>
+      <h2>Status of Loaded Data</h2>
 
-      <tr>
-        <td>Arizona</td>
-        <td>2001-2017</td>
-        <td>03/06/19</td>
-      </tr>
 
-      <tr>
-        <td>Arkansas</td>
-        <td>2000-2018</td>
-        <td>09/16/19</td>
-        <td> <ul>
-          <li>ARKANSAS 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY</li>
-          <li>ARKANSAS 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>ARKANSAS 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>ARKANSAS 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>ARKANSAS 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>ARKANSAS 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ARKANSAS 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ARKANSAS 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ARKANSAS 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>ARKANSAS 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ARKANSAS 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ARKANSAS 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ARKANSAS 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>ARKANSAS 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        </ul></td>
-      </tr>
-
-      <tr>
-        <td>California</td>
-        <td>2001-2017</td>
-        <td>03/26/19</td>
-      </tr>
-
-      <tr>
-        <td>Colorado</td>
-        <td>2002-2017</td>
-        <td>03/07/17</td>
-      </tr>
-
-      <tr>
-        <td>Connecticut</td>
-        <td>2003-2017</td>
-        <td>05/09/19</td>
-      </tr>
-
-      <tr>
-        <td>Delaware</td>
-        <td>2004-2017</td>
-        <td>05/08/19</td>
-      </tr>
-
-<tr>
-  <td>Georgia</td>
-  <td>1997-2017</td>
-  <td>09/26/19</td>
-      <td><ul>
-        <li>GEORGIA 1997: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY</li>
-        <li>GEORGIA 1998: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-        <li>GEORGIA 1999: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-        <li>GEORGIA 2000: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-        <li>GEORGIA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-        <li>GEORGIA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-        <li>GEORGIA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-        <li>GEORGIA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-        <li>GEORGIA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-        <li>GEORGIA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-        <li>GEORGIA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-        <li>GEORGIA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-        <li>GEORGIA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-        <li>GEORGIA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        <li>GEORGIA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-        <li>GEORGIA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-        <li>GEORGIA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-        <li>GEORGIA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        <li>GEORGIA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        <li>GEORGIA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        <li>GEORGIA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-      </ul></td>
-    </tr>
-
-      <tr>
-        <td>Idaho</td>
-        <td>2004-2017</td>
-        <td>03/05/19</td>
-      </tr>
-
-      <tr>
-        <td>Illinois</td>
-        <td>2001-2018</td>
-        <td>04/11/19</td>
-      </tr>
-
-      <tr>
-        <td>Indiana</td>
-        <td>1999-2017</td>
-        <td>04/11/19</td>
-      </tr>
-
-      <tr>
-        <td>Iowa</td>
-        <td>1999-2018</td>
-        <td>05/07/19</td>
-      </tr>
-
-      <tr>
-        <td>Kansas</td>
-        <td>2001-2017</td>
-        <td>05/20/19</td>
-      </tr>
-
-      <tr>
-        <td>Kentucky</td>
-        <td>2000-2016</td>
-        <td>10/10/19</td>
-        <td><ul>
-          <li>KENTUCKY 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>KENTUCKY 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>KENTUCKY 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>KENTUCKY 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>KENTUCKY 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>KENTUCKY 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>KENTUCKY 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>KENTUCKY 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>KENTUCKY 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>KENTUCKY 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>KENTUCKY 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>KENTUCKY 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>KENTUCKY 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        </ul></td>
-      </tr>
-
-      <tr>
-        <td>Lousiana</td>
-        <td>2001-2016</td>
-        <td>10/11/19</td>
-        <td><ul>
-            <li>LOUISIANA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY</li>
-              <li>LOUISIANA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-                <li>LOUISIANA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM</li>
-                  <li>LOUISIANA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-                    <li>LOUISIANA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-                      <li>LOUISIANA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-                        <li>LOUISIANA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-                          <li>LOUISIANA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-                            <li>LOUISIANA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        </ul></td>
-      </tr>
-
-      <tr>
-        <td>Maine</td>
-        <td>1999-2017</td>
-        <td>04/24/19</td>
-      </tr>
-
-      <tr>
-        <td>Maryland</td>
-        <td>2004-2017</td>
-        <td>05/08/19</td>
-      </tr>
-
-      <tr>
-        <td>Massachusetts</td>
-        <td>2003-2017</td>
-        <td>05/14/19</td>
-      </tr>
-
-      <tr>
-        <td>Michigan</td>
-        <td>2000-2018</td>
-        <td>06/06/19</td>
-      </tr>
-
-      <tr>
-        <td>Minnesota</td>
-        <td>1999-2017</td>
-        <td>04/15/19</td>
-      </tr>
-
-      <tr>
-        <td>Missouri</td>
-        <td>1999-2018</td>
-        <td>04/18/19</td>
-      </tr>
-
-      <tr>
-        <td>Montana</td>
-        <td>2003-2017</td>
-        <td>03/05/19</td>
-      </tr>
-
-      <tr>
-        <td>Nebraska</td>
-        <td>2001-2017</td>
-        <td>04/10/19</td>
-      </tr>
-
-      <tr>
-        <td>Nevada</td>
-        <td>2004-2018</td>
-        <td>08/27/19</td>
-        <td><ul>
-            <li>NEVADA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
-            <li>NEVADA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
-            <li>NEVADA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
-            <li>NEVADA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
-            <li>NEVADA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM</li>
-            <li>NEVADA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM</li>
-            <li>NEVADA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM</li>
-            <li>NEVADA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM, INVASIVE, VEG PROFILE</li>
-          </ul></td>
+      <table class="table table-hover">
+        <tr>
+          <th>State</th>
+          <th>Inventory Year(s)</th>
+          <th>Date Loaded</th>
+          <th>Data Included in ETL (Evaluation Group Description) </th>
         </tr>
-      </tr>
 
-      <tr>
-        <td>New Hampshire</td>
-        <td>2002-2017</td>
-        <td>04/15/19</td>
-      </tr>
+        <tr>
+          <td>Alabama</td>
+          <td>2000-2019</td>
+          <td> 09/30/19 </td>
+          <td>
+            <ul>
+              <li>ALABAMA 2000: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY </li>
+              <li>ALABAMA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>ALABAMA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>ALABAMA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>ALABAMA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>ALABAMA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ALABAMA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ALABAMA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ALABAMA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ALABAMA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ALABAMA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ALABAMA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ALABAMA 2019: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>New Jersey</td>
-        <td>2004-2017</td>
-        <td>05/09/19</td>
-      </tr>
+        <tr>
+          <td>Alaska</td>
+          <td>2004-2016</td>
+          <td>05/02/19</td>
+          <td>
+            <ul>
+              <li>
+                ALASKA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                ALASKA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                ALASKA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM
+              </li>
+              <li>
+                ALASKA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM
+              </li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>New Mexico</td>
-        <td>2005-2017</td>
-        <td>03/13/19</td>
-      </tr>
+        <tr>
+          <td>Arizona</td>
+          <td>2001-2017</td>
+          <td>03/06/19</td>
+          <td>
+            <ul>
+              <li>
+                ARIZONA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY,DWM
+              </li>
+              <li>
+                ARIZONA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                ARIZONA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                ARIZONA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                ARIZONA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                ARIZONA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM, INVASIVE, VEG PROFILE
+              </li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>New York</td>
-        <td>2002-2017</td>
-        <td>05/17/19</td>
-      </tr>
+        <tr>
+          <td>Arkansas</td>
+          <td>2000-2018</td>
+          <td>09/16/19</td>
+          <td>
+            <ul>
+              <li>ARKANSAS 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY</li>
+              <li>ARKANSAS 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>ARKANSAS 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>ARKANSAS 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>ARKANSAS 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>ARKANSAS 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ARKANSAS 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ARKANSAS 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ARKANSAS 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>ARKANSAS 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ARKANSAS 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ARKANSAS 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ARKANSAS 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>ARKANSAS 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>North Dakota</td>
-        <td>2001-2018</td>
-        <td>05/30/19</td>
-      </tr>
+        <tr>
+          <td>California</td>
+          <td>2001-2017</td>
+          <td>03/26/19</td>
+          <td>
+            <ul>
+              <li>
+                CALIFORNIA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                CALIFORNIA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                CALIFORNIA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                CALIFORNIA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Colorado</td>
+          <td>2002-2017</td>
+          <td>03/07/17</td>
+          <td>
+            <ul>
+              <li>
+                COLORADO 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                COLORADO 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                COLORADO 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                COLORADO 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                COLORADO 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Connecticut</td>
+          <td>2003-2017</td>
+          <td>05/09/19</td>
+          <td>
+            <ul>
+              <li>
+                CONNECTICUT 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                CONNECTICUT 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                CONNECTICUT 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                CONNECTICUT 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, REGENERATION
+              </li>
+              <li>
+                CONNECTICUT 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                CONNECTICUT 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                CONNECTICUT 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Delaware</td>
+          <td>2004-2017</td>
+          <td>05/08/19</td>
+          <td>
+            <ul>
+              <li>
+                DELAWARE 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                DELAWARE 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                DELAWARE 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                DELAWARE 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                DELAWARE 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                DELAWARE 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                DELAWARE 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                DELAWARE 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                DELAWARE 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                DELAWARE 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                DELAWARE 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, REGENERATION
+              </li>
+              <li>
+                DELAWARE 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                DELAWARE 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                DELAWARE 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Florida</td>
+          <td>2002-2016</td>
+          <td>11/27/19</td>
+          <td>
+            <ul>
+              <li>
+                FLORIDA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                FLORIDA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Georgia</td>
+          <td>1997-2017</td>
+          <td>09/26/19</td>
+          <td>
+            <ul>
+              <li>GEORGIA 1997: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY</li>
+              <li>GEORGIA 1998: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>GEORGIA 1999: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>GEORGIA 2000: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>GEORGIA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>GEORGIA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>GEORGIA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>GEORGIA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>GEORGIA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>GEORGIA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>GEORGIA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>GEORGIA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>GEORGIA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>GEORGIA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>GEORGIA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>GEORGIA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>GEORGIA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>GEORGIA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>GEORGIA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>GEORGIA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>GEORGIA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Hawaii</td>
+          <td>--</td>
+          <td>--</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Idaho</td>
+          <td>2004-2018</td>
+          <td>12/06/19</td>
+          <td>
+            <ul>
+              <li>
+                IDAHO 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                IDAHO 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                IDAHO 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                IDAHO 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                IDAHO 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                IDAHO 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM, INVASIVE, VEG PROFILE
+              </li>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Illinois</td>
+          <td>2001-2018</td>
+          <td>04/11/19</td>
+          <td>
+            <ul>
+              <li>
+                ILLINOIS 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                ILLINOIS 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                ILLINOIS 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, REGENERATION
+              </li>
+              <li>
+                ILLINOIS 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                ILLINOIS 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                ILLINOIS 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                ILLINOIS 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION, INVASIVE, VEG PROFILE, CROWN
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Indiana</td>
+          <td>1999-2017</td>
+          <td>04/11/19</td>
+          <td>
+            <ul>
+              <li>
+                INDIANA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                INDIANA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                INDIANA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                INDIANA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                INDIANA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Iowa</td>
+          <td>1999-2018</td>
+          <td>05/07/19</td>
+          <td>
+            <ul>
+              <li>
+                IOWA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                IOWA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                IOWA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, REGENERATION
+              </li>
+              <li>
+                IOWA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                IOWA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                IOWA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                IOWA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION, INVASIVE, VEG PROFILE, CROWN
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Kansas</td>
+          <td>2001-2017</td>
+          <td>05/20/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Kentucky</td>
+          <td>2000-2016</td>
+          <td>10/10/19</td>
+          <td>
+            <ul>
+              <li>KENTUCKY 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>KENTUCKY 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>KENTUCKY 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>KENTUCKY 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>KENTUCKY 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>KENTUCKY 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>KENTUCKY 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>KENTUCKY 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>KENTUCKY 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>KENTUCKY 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>KENTUCKY 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>KENTUCKY 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>KENTUCKY 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Lousiana</td>
+          <td>2001-2016</td>
+          <td>10/11/19</td>
+          <td>
+            <ul>
+              <li>LOUISIANA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY</li>
+              <li>LOUISIANA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>LOUISIANA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM</li>
+              <li>LOUISIANA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>LOUISIANA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>LOUISIANA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>LOUISIANA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>LOUISIANA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>LOUISIANA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Maine</td>
+          <td>1999-2017</td>
+          <td>04/24/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Maryland</td>
+          <td>2004-2017</td>
+          <td>05/08/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Massachusetts</td>
+          <td>2003-2017</td>
+          <td>05/14/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Michigan</td>
+          <td>2000-2018</td>
+          <td>06/06/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Minnesota</td>
+          <td>1999-2018</td>
+          <td>12/04/19</td>
+          <td>
+            <ul>
+              <li>
+                MINNESOTA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, DWM
+              </li>
+              <li>
+                MINNESOTA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                MINNESOTA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, REGENERATION
+              </li>
+              <li>
+                MINNESOTA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                MINNESOTA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION, INVASIVE, VEG PROFILE, CROWN
+              </li>
+              <li>
+                MINNESOTA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION, INVASIVE, VEG PROFILE, CROWN
+              </li>
+              <li>
+                MINNESOTA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION, INVASIVE, VEG PROFILE, CROWN
+              </li>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Missouri</td>
+          <td>1999-2018</td>
+          <td>04/18/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Montana</td>
+          <td>2003-2018</td>
+          <td>12/11/19</td>
+          <td>
+            <ul>
+              <li>
+                MONTANA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                MONTANA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY
+              </li>
+              <li>
+                MONTANA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                MONTANA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                MONTANA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM
+              </li>
+              <li>
+                MONTANA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM, INVASIVE, VEG PROFILE
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Nebraska</td>
+          <td>2001-2017</td>
+          <td>04/10/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Nevada</td>
+          <td>2004-2018</td>
+          <td>08/27/19</td>
+          <td>
+            <ul>
+              <li>NEVADA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
+              <li>NEVADA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
+              <li>NEVADA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
+              <li>NEVADA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY</li>
+              <li>NEVADA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM</li>
+              <li>NEVADA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM</li>
+              <li>NEVADA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM</li>
+              <li>NEVADA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, MORTALITY, DWM, INVASIVE, VEG PROFILE</li>
+            </ul>
+          </td>
+        </tr>
+        </tr>
+
+        <tr>
+          <td>New Hampshire</td>
+          <td>2002-2017</td>
+          <td>04/15/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>New Jersey</td>
+          <td>2004-2017</td>
+          <td>05/09/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>New Mexico</td>
+          <td>2005-2017</td>
+          <td>03/13/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+
+        <tr>
+          <td>New York</td>
+          <td>2002-2017</td>
+          <td>05/17/19</td>
+          <td>
+
+          </td>
+        </tr>
+        <tr>
+          <td>North Carolina</td>
+          <td>2002-2018</td>
+          <td>11/26/19</td>
+          <td>
+            <ul>
+              <li>
+                NORTH CAROLINA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                NORTH CAROLINA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                NORTH CAROLINA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                NORTH CAROLINA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                NORTH CAROLINA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                NORTH CAROLINA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                NORTH CAROLINA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>North Dakota</td>
+          <td>2001-2018</td>
+          <td>05/30/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
 
-      <tr>
-        <td>Ohio</td>
-        <td>2001-2017</td>
-        <td>04/26/19</td>
-      </tr>
-      <tr>
-        <td>Oklahoma</td>
-        <td>2008-2016</td>
-        <td>10/1/19</td>
-      <td>
-          <li>OKLAHOMA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>OKLAHOMA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>OKLAHOMA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>OKLAHOMA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>OKLAHOMA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-            <li>OKLAHOMA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+        <tr>
+          <td>Ohio</td>
+          <td>2001-2017</td>
+          <td>04/26/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+        <tr>
+          <td>Oklahoma</td>
+          <td>2008-2016</td>
+          <td>10/1/19</td>
+          <td>
+            <ul>
+              <li>OKLAHOMA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>OKLAHOMA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>OKLAHOMA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>OKLAHOMA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>OKLAHOMA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>OKLAHOMA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
               <li>OKLAHOMA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-                <li>OKLAHOMA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        </td>
-      </tr>
-      <tr>
-        <td>Oregon</td>
-        <td>2001-2016</td>
-        <td>05/01/19</td>
-      </tr>
+              <li>OKLAHOMA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
 
-      <tr>
-        <td>Pennsylvania</td>
-        <td>2000-2017</td>
-        <td>04/23/19</td>
-      </tr>
+        </tr>
+        <tr>
+          <td>Oregon</td>
+          <td>2001-2016</td>
+          <td>05/01/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Rhode Island</td>
-        <td>2003-2017</td>
-        <td>05/10/19</td>
-      </tr>
+        <tr>
+          <td>Pennsylvania</td>
+          <td>2000-2017</td>
+          <td>04/23/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
-      <tr>
-        <td>South Carolina</td>
-        <td>1999-2018</td>
-        <td>10/16/19</td>
-        <td><ul>
-          <li>SOUTH CAROLINA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY (GRM on Timberland only)</li>
-          <li>SOUTH CAROLINA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>SOUTH CAROLINA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>SOUTH CAROLINA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-          <li>SOUTH CAROLINA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-          <li>SOUTH CAROLINA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>SOUTH CAROLINA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-          <li>SOUTH CAROLINA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>SOUTH CAROLINA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>SOUTH CAROLINA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>SOUTH CAROLINA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-          <li>SOUTH CAROLINA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-      </tr>
+        <tr>
+          <td>Rhode Island</td>
+          <td>2003-2017</td>
+          <td>05/10/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
-      <tr>
-        <td>South Dakota</td>
-        <td>2001-2018</td>
-        <td>04/17/19</td>
-      </tr>
+        <tr>
+          <td>South Carolina</td>
+          <td>1999-2018</td>
+          <td>10/16/19</td>
+          <td>
+            <ul>
+              <li>SOUTH CAROLINA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY (GRM on Timberland only)</li>
+              <li>SOUTH CAROLINA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>SOUTH CAROLINA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>SOUTH CAROLINA 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+              <li>SOUTH CAROLINA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+              <li>SOUTH CAROLINA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>SOUTH CAROLINA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>SOUTH CAROLINA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>SOUTH CAROLINA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>SOUTH CAROLINA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>SOUTH CAROLINA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>SOUTH CAROLINA 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Texas</td>
-        <td>2001-2018</td>
-        <td>09/13/19</td>
-        <td><ul>
-            <li>TEXAS 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-            <li>TEXAS 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, INVASIVE</li>
-            <li>TEXAS 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, INVASIVE</li>
-            <li>TEXAS 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-            <li>TEXAS 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-            <li>TEXAS 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-            <li>TEXAS 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-            <li>TEXAS 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            <li>TEXAS 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-        </ul></td>
-      </tr>
+        <tr>
+          <td>South Dakota</td>
+          <td>2001-2018</td>
+          <td>04/17/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+        <tr>
+          <td>Tennessee</td>
+          <td>--</td>
+          <td>--</td>
+          <td>
+            <i>Data errors; Pending reload to DATIM datamart when FIADB is updated</i>
+          </td>
+        </tr>
+        <tr>
+          <td>Texas</td>
+          <td>2001-2018</td>
+          <td>09/13/19</td>
+          <td>
+            <ul>
+              <li>TEXAS 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>TEXAS 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, INVASIVE</li>
+              <li>TEXAS 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, INVASIVE</li>
+              <li>TEXAS 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>TEXAS 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>TEXAS 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>TEXAS 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+              <li>TEXAS 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+              <li>TEXAS 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Utah</td>
-        <td>2000-2017</td>
-        <td>03/06/19</td>
-      </tr>
+        <tr>
+          <td>Utah</td>
+          <td>2000-2017</td>
+          <td>03/06/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Vermont</td>
-        <td>2003-2017</td>
-        <td>04/23/19</td>
-      </tr>
+        <tr>
+          <td>Vermont</td>
+          <td>2003-2017</td>
+          <td>04/23/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+        <tr>
+          <td>Virginia</td>
+          <td>1998-2017</td>
+          <td>11/20/19</td>
+          <td>
+            <ul>
+              <li>
+                VIRGINIA 2001: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                VIRGINIA 2002: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                VIRGINIA 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME
+              </li>
+              <li>
+                VIRGINIA 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                VIRGINIA 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                VIRGINIA 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+              <li>
+                VIRGINIA 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>Washington</td>
+          <td>2002-2016</td>
+          <td>05/01/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Washington</td>
-        <td>2002-2016</td>
-        <td>05/01/19</td>
-      </tr>
+        <tr>
+          <td>West Virginia</td>
+          <td>2004-2017</td>
+          <td>04/22/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
 
-      <tr>
-        <td>West Virginia</td>
-        <td>2004-2017</td>
-        <td>04/22/19</td>
-      </tr>
+        <tr>
+          <td>Wisconsin</td>
+          <td>2000-2018</td>
+          <td>12/13/19</td>
+          <td>
+            <ul>
+              <li>
+                WISCONSIN 2003: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2004: ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2005: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2006: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2007: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2008: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2009: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2010: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY,DWM
+              </li>
+              <li>
+                WISCONSIN 2011: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2012: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2013: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY
+              </li>
+              <li>
+                WISCONSIN 2014: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, REGENERATION
+              </li>
+              <li>
+                WISCONSIN 2015: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                WISCONSIN 2016: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                WISCONSIN 2017: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION
+              </li>
+              <li>
+                WISCONSIN 2018: ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, REGENERATION, INVASIVE, VEG PROFILE, CROWN
+              </li>
+            </ul>
+          </td>
+        </tr>
 
-      <tr>
-        <td>Wisconsin</td>
-        <td>2000-2017</td>
-        <td>04/25/19</td>
-      </tr>
-
-      <tr>
-        <td>Wyoming</td>
-        <td>2011-2017</td>
-        <td>03/06/19</td>
-      </tr>
-    </table>
+        <tr>
+          <td>Wyoming</td>
+          <td>2011-2017</td>
+          <td>03/06/19</td>
+          <td>
+            <i>Pending reload to the DATIM datamart</i>
+          </td>
+        </tr>
+      </table>
+  </div>
   </body>
+
+
 </div>
+
 </html>

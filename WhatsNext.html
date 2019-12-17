@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <title>DATIM ETL Priorities and Plan</title>
@@ -10,163 +11,193 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="">DATIM</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="">DATIM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="LoadedData.html">Loaded Data</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="LoadedData.html">Loaded Data</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-<div class="ml-4">
+<div class="ml-4" class="containter">
   <h1> DATIM ETL Priorities and Communication Plan</h1>
   <h2>What's Next to be Loaded?</h2>
-  <h6><i>Last updated: 10/21/19</i></h6>
-  <body>
-<p>
-  Our to-do list at the moment consists of getting the SRS states loaded as soon
-  as possible.
-  </p>
+  <h6><i>Last updated: 12/16/19</i></h6>
 
-  <p>
-    If there are no outstanding special requests, then we refer to the <a href="https://enterprisecontent-usfs.opendata.arcgis.com/datasets/bc09d4e07dbb4d539a8e46dd3639b5fe">Most recent FIA data by State and Collection Year </a> map to determine
-    which states need an ETL refresh because new data has been loaded for that state. We
-    check this map periodically to ensure we are providing the most up to data in DATIM.
+  <body>
+    <p>
+      Our to-do list at the moment consists of getting the SRS states loaded as soon
+      as possible.
     </p>
 
     <p>
-      The table below details our current plan for loading data. This table includes the state and
+      If there are no outstanding special requests, then we refer to the <a href="https://enterprisecontent-usfs.opendata.arcgis.com/datasets/bc09d4e07dbb4d539a8e46dd3639b5fe">Most recent FIA data by State and Collection Year </a> map to determine
+      which states need an ETL refresh because new data has been loaded for that state. We
+      check this map periodically to ensure we are providing the most up to data in DATIM.
+    </p>
+
+    <hr>
+
+    <body>
+      <h2>The Queue</h2>
+      <p>
+        The table below details our current plan for loading data to PROD. This table includes the state and
         date we plan to load the data.
       </p>
-      <hr>
 
-      <table>
+      <table class="table table-hover">
         <tr>
+          <th>
+            Queue Number
+          </th>
           <th>State</th>
           <th>
             Inventory Year(s)
-            </th>
+          </th>
           <th>Tentative Load Date</th>
           <th>
             Comments
-            </th>
+          </th>
         </tr>
 
         <tr>
-          <td>North Carolina</td>
           <td>
-            2002-2018
+            1
+          </td>
+          <td>Alabama</td>
+          <td>
+            2000-2019
           </td>
           <td>(In Progress)</td>
-        </tr>
-
-                <tr>
-                  <td>Virginia</td>
-                  <td>
-                    1998-2018
-                  </td>
-                  <td>10/24/19</td>
-                </tr>
-
-                <tr>
-                  <td>Mississippi</td>
-                  <td>
-                      2006-2018
-                    </td>
-                  <td>10/28/19</td>
-
-                <tr>
-                  <td>US Virgin Islands</td>
-                  <td>
-                    2004-2019
-                  </td>
-                  <td>10/31/19</td>
-                </tr>
-
-                <tr>
-                  <td>Tennessee</td>
-                  <td>
-                    1999-2016
-                    </td>
-                  <td>(TBD)</td>
-                  <td>Issues with loading the data. Troubleshooting cause of the issues. Will contact the data steward if needed.</td>
-                </tr>
-
-        <tr>
-          <td>Indiana</td>
           <td>
-             1999-2018
-            </td>
-          <td> (TBD)</td>
+
+          </td>
           <td>
+
           </td>
         </tr>
 
         <tr>
-          <td>Nebraska</td>
+          <td>
+            2
+          </td>
+          <td>Arizona</td>
           <td>
             2001-2018
-            </td>
-          <td>(TBD)</td>
-        </tr>
+          </td>
+          <td>12/18/19</td>
+          <td>
 
-        <tr>
-          <td>Minnesota</td>
+          </td>
           <td>
-            1999-2018
-            </td>
-          <td>(TBD)</td>
-          <td>
+
           </td>
         </tr>
 
         <tr>
-          <td>Wisconsin</td>
           <td>
-             2000-2018
-            </td>
-          <td>(TBD)</td>
-          <td>
+            3
           </td>
+          <td>Arkansas</td>
+          <td>
+            2000-2018
+          </td>
+          <td>12/20/19</td>
+          <td>
+
+          </td>
+
+        <tr>
+          <td>
+            4
+          </td>
+          <td>Georgia</td>
+          <td>
+            1997-2017
+          </td>
+          <td>12/24/19</td>
+          <td>
+
+          </td>
+        <td>
+
+        </td>
         </tr>
 
         <tr>
+          <td>
+            5
+          </td>
+          <td>Kentucky</td>
+          <td>
+            2000-2016
+          </td>
+          <td>12/27/19</td>
+          <td></td>
+            <td>
+
+            </td>
+
+          </tr>
+
+        <tr>
+          <td>
+            6
+          </td>
           <td>Louisiana</td>
           <td>
-              2001-2016
-            </td>
-          <td>(TBD)</td>
+            2001-2016
+          </td>
+          <td> 01/02/20</td>
+          <td>
+          </td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
         </tr>
 
         <tr>
-          <td>Florida</td>
           <td>
-              2002-2016
-            </td>
-          <td>(TBD)</td>
+            7
+          </td>
+          <td>South Carolina</td>
+          <td>
+            1999-2018
+          </td>
+          <td>01/07/20</td>
+          <td>
+
+          </td>
+          <td>
+
+          </td>
         </tr>
+        <p>
+          <b><i>Please note: TBD stands for To Be Determined.</i></b>
+        </p>
+    </body>
 
-  </body>
 
-  <p>
-    <i>Please note: TBD stands for To Be Determined.</i>
-    </p>
 </div>
+
 </html>
