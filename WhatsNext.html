@@ -39,9 +39,34 @@
 <div class="ml-4" class="containter">
   <h1> DATIM ETL Priorities and Communication Plan</h1>
   <h2>What's Next to be Loaded?</h2>
-  <h6><i>Last updated: 12/27/19</i></h6>
+  <!--Resource for automatic date code: https://www.webdesignerforum.co.uk/topic/32223-how-to-make-an-automatic-last-updated-datetime-in-html/ -->
+  <script language="Javascript">
+  months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var d=new Date();
+var weekday=new Array(7);
+weekday[0]="Sunday";
+weekday[1]="Monday";
+weekday[2]="Tuesday";
+weekday[3]="Wednesday";
+weekday[4]="Thursday";
+weekday[5]="Friday";
+weekday[6]="Saturday";
+
+var d = new Date();
+(d.getFullYear());
+
+
+var theDate = new Date(document.lastModified);
+theDate.setTime((theDate.getTime()+(60*60)) )
+with (theDate) {
+document.write("<i>Last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+' '+getHours()+':'+getMinutes()+" GMT</i>")
+}
+  </script>
+
+  <!--<h6><i>Last updated: 01/02/20</i></h6> -->
 
   <body>
+      <span id="lastModified"></span>
     <p>
       Our to-do list at the moment consists of getting the SRS states loaded as soon
       as possible.
@@ -87,8 +112,63 @@
           </td>
           <td>01/02/20</td>
           <td>
+Attempted to reload the data; ran into issues which we are now troubleshooting.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            2
+          </td>
+          <td>North Dakota</td>
+          <td>
+            2001-2018
+          </td>
+          <td>01/03/20</td>
+          <td>
 
           </td>
+        </tr>
+
+        <tr>
+          <td>
+            3
+          </td>
+          <td>South Dakota</td>
+          <td>
+            2001-2018
+          </td>
+          <td>01/06/20</td>
+          <td>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            4
+          </td>
+          <td>Wyoming</td>
+          <td>
+            2011-2018
+          </td>
+          <td>01/07/20</td>
+          <td>
+
+          </td>
+
+          <tr>
+            <td>
+              5
+            </td>
+            <td>Nebraska</td>
+            <td>
+              2001-2018
+            </td>
+            <td>01/08/20</td>
+            <td>
+
+            </td>
         </tr>
         <p>
           <b><i>Please note: TBD stands for To Be Determined.</i></b>

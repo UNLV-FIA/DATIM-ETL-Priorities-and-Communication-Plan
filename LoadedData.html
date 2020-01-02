@@ -40,7 +40,29 @@
   <div class="ml-4">
     <h1>DATIM ETL Priorities and Communication Plan</h1>
     <h2>Loaded Data</h2>
-    <h6><i>Last updated: 12/27/19</i></h6>
+      <!--Resource for automatic date code: https://www.webdesignerforum.co.uk/topic/32223-how-to-make-an-automatic-last-updated-datetime-in-html/ -->
+    <script language="Javascript">
+    months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var d=new Date();
+    var weekday=new Array(7);
+    weekday[0]="Sunday";
+    weekday[1]="Monday";
+    weekday[2]="Tuesday";
+    weekday[3]="Wednesday";
+    weekday[4]="Thursday";
+    weekday[5]="Friday";
+    weekday[6]="Saturday";
+
+    var d = new Date();
+    (d.getFullYear());
+
+
+    var theDate = new Date(document.lastModified);
+    theDate.setTime((theDate.getTime()+(60*60)) )
+    with (theDate) {
+    document.write("<i>Website last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+' '+getHours()+':'+getMinutes()+" GMT</i>")
+    }
+    </script>
     <p>
       Based on the <a href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd593201.pdf">Plan Revision Statuses for NFS</a>, the DATIM DataMart team started ETL'ing
       data for states based on these priorities (i.e., "Needs (older than 15 years)", "Needs soon
@@ -61,7 +83,7 @@
   <div class="ml-4" class="container">
 
     <body>
-      <h2>Status of Loaded Data</h2>
+      <h3>Data currently in the Datamart</h3>
 
 
       <table class="table table-hover">
@@ -3348,7 +3370,9 @@
   </td>
 </tr>
 </table>
+
 </div>
+
 </body>
 
 
