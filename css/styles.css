@@ -73,3 +73,19 @@ h6{
   text-decoration: none;
   cursor: pointer;
 }
+
+.etl-button {
+  text-align: left;
+  width: 100%;
+  border-radius:5px;
+  border-color:transparent;
+  background-color: #8babf1;
+  color: black;
+}
+
+.etl-button:hover, .etl-button:focus {
+  background-color:#0073e6;
+  transition: 120ms;
+  color:white;
+  border-color: black;
+}
