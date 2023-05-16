@@ -73,3 +73,11 @@ h6{
   text-decoration: none;
   cursor: pointer;
 }
+
+.btnClass{
+  margin-bottom: 5px;
+  border-radius:5px;
+  border-color:transparent;
+  background-color: #2F74DC;
+  color: white;
+}
