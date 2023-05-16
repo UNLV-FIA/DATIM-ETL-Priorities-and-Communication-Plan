@@ -25,6 +25,14 @@
   overflow: hidden;
 }
 
+.navbar {
+  background-color: #06863d;
+}
+
+.nav-link {
+  color: white;
+}
+
 .nav2{
 display: inline;
 }
@@ -72,4 +80,24 @@ h6{
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.etl-button {
+  text-align: left;
+  width: 25rem;
+  border-radius:5px;
+  border-color:transparent;
+  background-color: #2F74DC;
+  color: white;
+}
+
+.etl-button:hover, .etl-button:focus {
+  background-color:#0F559C;
+  transition: 120ms;
+  color:white;
+  border-color: black;
+}
+
+.text-link {
+  color: #2D5DFF;
 }
