@@ -76,15 +76,15 @@ h6{
 
 .etl-button {
   text-align: left;
-  width: 100%;
+  width: 25rem;
   border-radius:5px;
   border-color:transparent;
-  background-color: #8babf1;
-  color: black;
+  background-color: #2F74DC;
+  color: white;
 }
 
 .etl-button:hover, .etl-button:focus {
-  background-color:#0073e6;
+  background-color:#0F559C;
   transition: 120ms;
   color:white;
   border-color: black;
