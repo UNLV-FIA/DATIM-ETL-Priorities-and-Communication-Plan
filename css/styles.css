@@ -93,7 +93,15 @@ h6{
   color: #ffffff;
 }
 
-.etl-button:hover, .etl-button:focus {
+.etl-button:focus {
+  background-color: #49572a;
+  transition: 120ms;
+  color:#FFB733;
+  text-decoration: underline;
+  border-color: black;
+}
+
+.etl-button:hover {
   background-color:#788952;
   transition: 120ms;
   color:black;
