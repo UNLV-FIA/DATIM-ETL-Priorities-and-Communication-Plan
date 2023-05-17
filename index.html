@@ -79,7 +79,30 @@
       </p>
       <p>
         This website includes four pages:
-        <ul>
+        <table role="presentation">
+          <tbody>
+            <tr>
+              <td><button class="btnClass" onclick="window.location.href = 'index.html';">Home</button></td>
+              <td>[You're currently here.] This page provides a general overview of the DATIM Data Loads.</td>
+            </tr>
+            <tr>
+              <td><button class="btnClass" onclick="window.location.href = 'LoadedData.html';">Loaded Data</button></td>
+              <td>In table form this page provides information on data  recently loaded to the DATIM datamart. The information includes the states that have
+                been loaded, the inventory years  loaded, and the load date.</td>
+            </tr>
+            <tr>
+              <td><button class="btnClass" onclick="window.location.href = 'SpecialRequests.html';">Special Requests</button></td>
+              <td>This page describes how special requests are handled. These are requests to load specific state(s)
+            by inventory year(s) sent to the DATIM team or requested via the Contact Us page in DATIM.</td>
+            </tr>
+            <tr>
+              <td> <button  class="btnClass" onclick="window.location.href = 'WhatsNext.html';">What's Next to be Loaded?</button></td>
+              <td>This page describes how data loads are prioritized and lets you know what data  are in queue for loading.</td>
+            </tr>
+          </tbody>
+
+        </table>
+        <!-- <ul>
           <li>
             <button class="btnClass" onclick="window.location.href = 'index.html';">Home</button> - [You're currently here.] This page provides a general overview of the DATIM Data Loads.
           </li>
@@ -94,7 +117,7 @@
           <li>
             <button  class="btnClass" onclick="window.location.href = 'WhatsNext.html';">What's Next to be Loaded?</button> - This page describes how data loads are prioritized and lets you know what data  are in queue for loading.
           </li>
-          </ul>
+          </ul> -->
       </p>
       <br />
       <hr />
