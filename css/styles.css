@@ -34,6 +34,18 @@
   background-color: #49572a;
 }
 
+.nav-container {
+  background-color: #C8C8C8;
+  padding: 3px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  margin-bottom: 1rem;
+}
+
 .nav2{
 display: inline;
 }
