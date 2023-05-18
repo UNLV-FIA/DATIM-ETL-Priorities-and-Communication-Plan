@@ -88,17 +88,19 @@ h6{
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #757575 !important;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  opacity: 1 !important;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black !important;
   text-decoration: none;
   cursor: pointer;
+  opacity: 1 !important;
 }
 
 .etl-button {
@@ -122,4 +124,12 @@ h6{
 
 .text-link {
   color: #2D5DFF;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  color: white !important;
 }
