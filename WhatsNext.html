@@ -5,15 +5,23 @@
   <meta charset="utf-8">
   <title>DATIM Data Loads | What's Next to be Loaded?</title>
   <link rel="stylesheet" href="css/styles.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light">
   <a class="navbar-brand" href="">DATIM</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -41,39 +49,41 @@
   <h2>What's Next to be Loaded?</h2>
   <!--Resource for automatic date code: https://www.webdesignerforum.co.uk/topic/32223-how-to-make-an-automatic-last-updated-datetime-in-html/ -->
   <script language="Javascript">
-  months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-var d=new Date();
-var weekday=new Array(7);
-weekday[0]="Sunday";
-weekday[1]="Monday";
-weekday[2]="Tuesday";
-weekday[3]="Wednesday";
-weekday[4]="Thursday";
-weekday[5]="Friday";
-weekday[6]="Saturday";
+    months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var d = new Date();
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
 
-var d = new Date();
-(d.getFullYear());
+    var d = new Date();
+    (d.getFullYear());
 
 
-var theDate = new Date(document.lastModified);
-theDate.setTime((theDate.getTime()+(60*60)) )
-with (theDate) {
-document.write("<i>Last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+' '+getHours()+':'+getMinutes()+" PST</i>")
-}
+    var theDate = new Date(document.lastModified);
+    theDate.setTime((theDate.getTime() + (60 * 60)))
+    with (theDate) {
+      document.write("<i>Last updated: " + weekday[getDay()] + ', ' + months[getMonth()] + ' ' + getDate() + ', ' + d.getFullYear() + ' ' + getHours() + ':' + getMinutes() + " PST</i>")
+    }
   </script>
 
   <!--<h6><i>Last updated: 01/02/20</i></h6> -->
 
   <body>
-      <span id="lastModified"></span>
+    <span id="lastModified"></span>
     <p>
       Our to-do list at the moment consists of getting the SRS states loaded as soon
       as possible.
     </p>
 
     <p>
-      If there are no outstanding special requests, then we refer to the <a href="https://enterprisecontent-usfs.opendata.arcgis.com/datasets/bc09d4e07dbb4d539a8e46dd3639b5fe">Most recent FIA data by State and Collection Year </a> map to determine
+      If there are no outstanding special requests, then we refer to the <a
+        href="https://enterprisecontent-usfs.opendata.arcgis.com/datasets/bc09d4e07dbb4d539a8e46dd3639b5fe">Most recent
+        FIA data by State and Collection Year </a> map to determine
       which states need an ETL refresh because new data has been loaded for that state. We
       check this map periodically to ensure we are providing the most up to data in DATIM.
     </p>
@@ -86,98 +96,79 @@ document.write("<i>Last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '
         The table below details our current plan for loading data to PROD. This table includes the state and
         date we plan to load the data.
       </p>
-
-      <table class="table table-hover">
+      <h5 id="loadDataQueue"> Table 1: Load Data Queue</h5>
+      <table aria-labelledby="loadDataQueue" class="table table-hover">
         <tr>
-          <th>
-            Queue Number
-          </th>
-          <th>State/ U.S. Territory</th>
-          <th>
-            Inventory Year(s)
-          </th>
-          <th>Tentative Load Date</th>
-          <th>
-            Comments
-          </th>
+          <th scope="col">Queue Number</th>
+          <th scope="col">State/ U.S. Territory</th>
+          <th scope="col">Inventory Year(s)</th>
+          <th scope="col">Tentative Load Date</th>
+          <th scope="col">Comments</th>
         </tr>
 
-<tr>
-  <td>
---
-  </td>
-  <td>California</td>
-  <td>
-    2019
-  </td>
-  <td>--</td>
-</tr>
-   
-<tr>
-  <td>
---
-  </td>
-  <td>New Jersey</td>
-  <td>
-    2004-2018
-  </td>
-  <td>--</td>
-</tr>
+        <tr>
+          <th scope="row">
+            --
+          </th>
+          <td>California</td>
+          <td>
+            2019
+          </td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
 
-<tr>
-  <td>
---
-  </td>
-  <td>Maine</td>
-  <td>
-    1999-2018
-  </td>
-  <td>--</td>
-  <td>
-    Load errors. Will attempt to reload once FIADB is updated with correct data.
-  </td>
-</tr>
+        <tr>
+          <th scope="row">
+            --
+          </th>
+          <td>New Jersey</td>
+          <td>
+            2004-2018
+          </td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
 
-    <tr>
-  <td>
---
-  </td>
-  <td>Oregon</td>
-  <td>
-    2019
-  </td>
-  <td>--</td>
-  <td>
-  <td>--</td>
-  </td> 
- </tr>
+        <tr>
+          <th scope="row">
+            --
+          </th>
+          <td>Maine</td>
+          <td>
+            1999-2018
+          </td>
+          <td>--</td>
+          <td>
+            Load errors. Will attempt to reload once FIADB is updated with correct data.
+          </td>
+        </tr>
 
-    <tr>
-  <td>
---
-  </td>
-  <td>Washington</td>
-  <td>
-    2019
-  </td>
-  <td>--</td>
-  <td>
-  <td>--</td> 
-  </td>
-</tr>
+        <tr>
+          <th scope="row">
+            --
+          </th>
+          <td>Oregon</td>
+          <td>
+            2019
+          </td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
 
-<tr>
-  <td>
---
-    
-<tr>
-  <td>
-</tr>
-        <p>
-        </p>
+        <tr>
+          <th scope="row">
+            --
+          </th>
+          <td>Washington</td>
+          <td>
+            2019
+          </td>
+          <td>--</td>
+          <td>--</td>
+        </tr>
+      </table>
     </body>
-
-
 </div>
 
 </html>
