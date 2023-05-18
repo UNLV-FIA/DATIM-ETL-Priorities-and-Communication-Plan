@@ -23,6 +23,10 @@
     background-color: #b2d3be;
   }
 
+table tr:last-child {
+  border-bottom: 1px solid #dee2e6;
+}
+
 .nav{
   list-style-type: none;
   margin: 0;
