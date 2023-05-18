@@ -14,6 +14,11 @@
     color: #004a2f;
   }
 
+  h5 {
+    background-color: rgb(220, 220, 220);
+    padding: 0.5rem;
+  }
+
   tr:hover {
     background-color: #b2d3be;
   }
@@ -35,6 +40,12 @@ h6{
 
 #title {
 }
+
+.modal-title {
+  background-color: white;
+  padding: 0rem;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
@@ -73,12 +84,29 @@ h6{
   text-decoration: none;
   cursor: pointer;
 }
-
-.btnClass{
-  margin-bottom: 5px;
+.etl-button {
+  width: 25rem;
   border-radius:5px;
   border-color:transparent;
   background-color: #49572a;
-  color: #fff;
-  width: 14rem;
+  color: #ffffff;
+}
+
+.etl-button:focus {
+  background-color: #49572a;
+  transition: 120ms;
+  color:#FFB733;
+  text-decoration: underline;
+  border-color: black;
+}
+
+.etl-button:hover {
+  background-color:#788952;
+  transition: 120ms;
+  color:black;
+  border-color: black;
+}
+
+.loaded-data-table-cell {
+  width:10rem;
 }
