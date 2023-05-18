@@ -110,3 +110,32 @@ h6{
 .loaded-data-table-cell {
   width:10rem;
 }
+
+.pagesBtnClass{
+  margin-bottom: 5px;
+  margin-right: 10px;
+  border-radius:5px;
+  border-color:transparent;
+  background-color: #49572a;
+  color: #fff;
+  width: 14rem;
+}
+
+.pagesBtnClass:hover{
+  background-color:#788952;
+  transition: 120ms;
+  color:black;
+  border-color: black;
+}
+
+.pagesBtnClass:focus {
+  background-color: #49572a;
+  transition: 120ms;
+  color:#FFB733;
+  text-decoration: underline;
+  border-color: black;
+}
+
+.remove-table-hover tr:hover{
+  background-color: unset !important;
+}
