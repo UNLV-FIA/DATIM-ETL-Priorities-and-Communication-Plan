@@ -34,6 +34,22 @@ table tr:last-child {
   overflow: hidden;
 }
 
+.navbar {
+  background-color: #49572a;
+}
+
+.nav-container {
+  background-color: #C8C8C8;
+  padding: 3px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  margin-bottom: 1rem;
+}
+
 .nav2{
 display: inline;
 }
@@ -76,17 +92,19 @@ h6{
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #757575 !important;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  opacity: 1 !important;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black !important;
   text-decoration: none;
   cursor: pointer;
+  opacity: 1 !important;
 }
 .etl-button {
   width: 25rem;
@@ -113,6 +131,18 @@ h6{
 
 .loaded-data-table-cell {
   width:10rem;
+}
+
+.text-link {
+  color: #2D5DFF;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  color: white !important;
 }
 
 .pagesBtnClass{
