@@ -81,26 +81,28 @@
       </p>
       <p>
         This website includes four pages:
-        <ul>
-          <li>
-            <b>Home</b> - [You're currently here.] This page provides a general overview of the DATIM Data Loads.
-          </li>
-          <li>
-            <b>Loaded Data</b> - In table form this page provides information on data  recently loaded to the DATIM datamart. The information includes the states that have
-            been loaded, the inventory years  loaded, and the load date.
-          </li>
-          <li>
-            <b>Special Requests</b> - This page describes how special requests are handled. These are requests to load specific state(s)
-            by inventory year(s) sent to the DATIM team or requested via the Contact Us page in DATIM.
-          </li>
-          <li>
-            <b>What's Next to be Loaded?</b> - This page describes how data loads are prioritized and lets you know what data  are in queue for loading.
-          </li>
-          </ul>
-      </p>
-      <br />
-      <hr />
-      <br />
+        <table role="presentation" class="table remove-table-hover">
+          <tbody style="display: flex; flex-direction: column;">
+            <tr style="display: flex;">
+              <td><button class="pagesBtnClass" onclick="window.location.href = 'index.html';">Home</button></td>
+              <td style="flex-grow: 1;">[You're currently here.] This page provides a general overview of the DATIM Data Loads.</td>
+            </tr>
+            <tr style="display: flex;">
+              <td><button class="pagesBtnClass" onclick="window.location.href = 'LoadedData.html';">Loaded Data</button></td>
+              <td style="flex-grow: 1;">In table form this page provides information on data  recently loaded to the DATIM datamart. The information includes the states that have
+                been loaded, the inventory years  loaded, and the load date.</td>
+            </tr>
+            <tr style="display: flex;">
+              <td><button class="pagesBtnClass" onclick="window.location.href = 'SpecialRequests.html';">Special Requests</button></td>
+              <td style="flex-grow: 1;">This page describes how special requests are handled. These are requests to load specific state(s)
+            by inventory year(s) sent to the DATIM team or requested via the Contact Us page in DATIM.</td>
+            </tr>
+            <tr style="display: flex;">
+              <td> <button  class="pagesBtnClass" onclick="window.location.href = 'WhatsNext.html';">What's Next to be Loaded?</button></td>
+              <td style="flex-grow: 1;">This page describes how data loads are prioritized and lets you know what data  are in queue for loading.</td>
+            </tr>
+          </tbody>
+        </table>             
   </section>
 </body>
     </div>
