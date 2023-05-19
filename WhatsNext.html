@@ -18,31 +18,32 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="">DATIM</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="LoadedData.html">Loaded Data</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<div class="nav-container">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="">DATIM</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LoadedData.html">Loaded Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
 <div class="ml-4" class="containter">
   <h1>DATIM Data Loads</h1>
@@ -81,9 +82,7 @@
     </p>
 
     <p>
-      If there are no outstanding special requests, then we refer to the <a
-        href="https://enterprisecontent-usfs.opendata.arcgis.com/datasets/bc09d4e07dbb4d539a8e46dd3639b5fe">Most recent
-        FIA data by State and Collection Year </a> map to determine
+      If there are no outstanding special requests, then we refer to the <a href="https://enterprisecontent-usfs.opendata.arcgis.com/datasets/bc09d4e07dbb4d539a8e46dd3639b5fe" class="text-link">Most recent FIA data by State and Collection Year </a> map to determine
       which states need an ETL refresh because new data has been loaded for that state. We
       check this map periodically to ensure we are providing the most up to data in DATIM.
     </p>

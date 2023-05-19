@@ -34,6 +34,22 @@ table tr:last-child {
   overflow: hidden;
 }
 
+.navbar {
+  background-color: #49572a;
+}
+
+.nav-container {
+  background-color: #C8C8C8;
+  padding: 3px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+  margin-bottom: 1rem;
+}
+
 .nav2{
 display: inline;
 }
@@ -76,19 +92,20 @@ h6{
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #757575 !important;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  opacity: 1 !important;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: black !important;
   text-decoration: none;
   cursor: pointer;
+  opacity: 1 !important;
 }
-
 .etl-button {
   width: 25rem;
   border-radius:5px;
@@ -114,4 +131,45 @@ h6{
 
 .loaded-data-table-cell {
   width:10rem;
+}
+
+.text-link {
+  color: #2D5DFF;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.pagesBtnClass{
+  margin-bottom: 5px;
+  margin-right: 10px;
+  border-radius:5px;
+  border-color:transparent;
+  background-color: #49572a;
+  color: #fff;
+  width: 14rem;
+}
+
+.pagesBtnClass:hover{
+  background-color:#788952;
+  transition: 120ms;
+  color:black;
+  border-color: black;
+}
+
+.pagesBtnClass:focus {
+  background-color: #49572a;
+  transition: 120ms;
+  color:#FFB733;
+  text-decoration: underline;
+  border-color: black;
+}
+
+.remove-table-hover tr:hover{
+  background-color: unset !important;
 }
