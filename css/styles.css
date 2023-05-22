@@ -174,13 +174,24 @@ h6{
   background-color: unset !important;
 }
 
-.footer{
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #49572a;
+  max-height: 30px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-list{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  background-color: #49572a;
+  flex-wrap: wrap;  
   color: #fff;
 }
 .footer-list-items{
