@@ -11,184 +11,173 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-
-<div class="nav-container">
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="">DATIM</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<body>
+  <div class="nav-container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="">DATIM</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="LoadedData.html">Loaded Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  
+  <div>
+    <div class="ml-4">
+      <h1>DATIM Data Loads</h1>
+      <h2>Loaded Data</h2>
+        <!--Resource for automatic date code: https://www.webdesignerforum.co.uk/topic/32223-how-to-make-an-automatic-last-updated-datetime-in-html/ -->
+      <script>
+        months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var d=new Date();
+        var weekday=new Array(7);
+        weekday[0]="Sunday";
+        weekday[1]="Monday";
+        weekday[2]="Tuesday";
+        weekday[3]="Wednesday";
+        weekday[4]="Thursday";
+        weekday[5]="Friday";
+        weekday[6]="Saturday";
+  
+        var d = new Date();
+        (d.getFullYear());
   
   
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="LoadedData.html">Loaded Data</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="SpecialRequests.html">Special Requests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="WhatsNext.html">What's Next to be Loaded?</a>
-        </li>
-      </ul>
+        var theDate = new Date(document.lastModified);
+        theDate.setTime((theDate.getTime()+(60*60)) )
+        with (theDate) {
+        document.write("<i>Website last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+' '+getHours()+':'+getMinutes()+" PST</i>")
+        }
+      </script>
+      <p>
+        The DATIM team prioritizes data extractions, transformations, and loads (ETLs) based on the <a class="text-link" href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd593201.pdf">Plan Revision Statuses for NFS</a> (i.e., "Needs (older than 15 years)", "Needs soon
+        (10-15 years old)", "Under Revision", and "Revised within 10 years"). 
+      </p>
+  
+      <p>The table below sets forth data ETL'ed to the DATIM data mart for State inventories.</p>
+  
+      <p>
+        When a new state inventory is loaded/reloaded to the DATIM data mart, it will be
+        added to the table below.
+      </p>
+      <hr>
     </div>
-  </nav>
-</div>
-
-<div>
-  <div class="ml-4">
-    <h1>DATIM Data Loads</h1>
-    <h2>Loaded Data</h2>
-      <!--Resource for automatic date code: https://www.webdesignerforum.co.uk/topic/32223-how-to-make-an-automatic-last-updated-datetime-in-html/ -->
-    <script>
-    months = ['January', 'Febraury', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    var d=new Date();
-    var weekday=new Array(7);
-    weekday[0]="Sunday";
-    weekday[1]="Monday";
-    weekday[2]="Tuesday";
-    weekday[3]="Wednesday";
-    weekday[4]="Thursday";
-    weekday[5]="Friday";
-    weekday[6]="Saturday";
-
-    var d = new Date();
-    (d.getFullYear());
-
-
-    var theDate = new Date(document.lastModified);
-    theDate.setTime((theDate.getTime()+(60*60)) )
-    with (theDate) {
-    document.write("<i>Website last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+' '+getHours()+':'+getMinutes()+" PST</i>")
-    }
-    </script>
-    <p>
-      The DATIM team prioritizes data extractions, transformations, and loads (ETLs) based on the <a class="text-link" href="https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd593201.pdf">Plan Revision Statuses for NFS</a> (i.e., "Needs (older than 15 years)", "Needs soon
-      (10-15 years old)", "Under Revision", and "Revised within 10 years"). </p>
-
-    <p>The table below sets forth data ETL'ed to the DATIM data mart for State inventories.
-    </p>
-
-    <p>
-      When a new state inventory is loaded/reloaded to the DATIM data mart, it will be
-      added to the table below.
-    </p>
-    <hr>
   </div>
 
-  <div class="ml-4 container">
+  <div  class="ml-2 container">
+    <h3>Data currently in the Datamart</h3>
+    <h5 id="loadedStateData"> Table 1: Loaded State Data</h5>
+    <table aria-labelledby="loadedStateData" class="table table-hover">
+      <tr>
+        <th scope="col">State</th>
+        <th scope="col">Inventory Year(s)</th>
+        <th scope="col">Date Loaded</th>
+        <th scope="col">Data Included in ETL (Evaluation Group Description) </th>
+      </tr>
 
-    <body>
-      <h3>Data currently in the Datamart</h3>
-
-<h5 id="loadedStateData"> Table 1: Loaded State Data</h5>
-      <table aria-labelledby="loadedStateData" class="table table-hover">
-        <tr>
-          <th scope="col">State</th>
-          <th scope="col">Inventory Year(s)</th>
-          <th scope="col">Date Loaded</th>
-          <th scope="col">Data Included in ETL (Evaluation Group Description) </th>
-        </tr>
-
-        <tr>
-          <th scope="row" class="loaded-data-table-cell">Alabama</th>
-          <td class="loaded-data-table-cell">2000-2022</td>
-          <td class="loaded-data-table-cell">01/07/23</td>
-          <td class="loaded-data-table-cell">
-            <!--Trigger/Open the modal -->
-            <button type="button" class="etl-button" data-toggle="modal" data-target="#ALModal">Alabama ETL Evaluations</button>
-
-            <!-- The Modal -->
-            <div class="modal fade" id="ALModal" tabindex="-1" role="dialog" aria-labelledby="ALModalTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="ALModalTitle">Evaluation Group Descriptions</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <ol>
-              <li><b>ALABAMA 2000:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY </li>
-              <li><b>ALABAMA 2001:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-              <li><b>ALABAMA 2002:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
-              <li><b>ALABAMA 2003:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-              <li><b>ALABAMA 2004:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
-              <li><b>ALABAMA 2005:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2006:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2007:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2008:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2009:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2010:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2011:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2012:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2013:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
-              <li><b>ALABAMA 2014:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2015:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2016:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2017:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2018:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2019:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2020:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2021:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-              <li><b>ALABAMA 2022:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
-            </ol>
+      <tr>
+        <th scope="row" class="loaded-data-table-cell">Alabama</th>
+        <td class="loaded-data-table-cell">2000-2022</td>
+        <td class="loaded-data-table-cell">01/07/23</td>
+        <td class="loaded-data-table-cell">
+          <!--Trigger/Open the modal -->
+          <button type="button" class="etl-button" data-toggle="modal" data-target="#ALModal">Alabama ETL Evaluations</button>
+          <!-- The Modal -->
+          <div class="modal fade" id="ALModal" tabindex="-1" role="dialog" aria-labelledby="ALModalTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="ALModalTitle">Evaluation Group Descriptions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ol>
+                    <li><b>ALABAMA 2000:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, GROWTH, REMOVALS, MORTALITY </li>
+                    <li><b>ALABAMA 2001:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+                    <li><b>ALABAMA 2002:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME</li>
+                    <li><b>ALABAMA 2003:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+                    <li><b>ALABAMA 2004:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY</li>
+                    <li><b>ALABAMA 2005:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2006:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2007:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2008:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2009:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2010:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2011:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2012:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2013:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, INVASIVE</li>
+                    <li><b>ALABAMA 2014:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2015:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2016:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2017:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2018:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2019:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2020:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2021:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                    <li><b>ALABAMA 2022:</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM, INVASIVE</li>
+                  </ol>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row" class="loaded-data-table-cell">Alaska</th>
+        <td class="loaded-data-table-cell">2007-2019</td>
+        <td class="loaded-data-table-cell">06/03/22</td>
+        <td class="loaded-data-table-cell">
+          <!--Trigger/Open the modal -->
+          <button type="button" class="etl-button" data-toggle="modal" data-target="#AKModal">Alaska ETL Evaluations</button>
+          <!-- The Modal -->
+          <div class="modal fade" id="AKModal" tabindex="-1" role="dialog" aria-labelledby="AKModalTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="AKModalTitle">Evaluation Group Descriptions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <ol>
+                    <li><b>ALASKA 2017 (Coastal):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM</li>
+                    <li><b>ALASKA 2018 (Coastal):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM</li>
+                    <li><b>ALASKA 2019 (Coastal):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM</li>
+                    <li><b>ALASKA 2019 (Interior):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM, GROUND LAYER</li>
+                  </ol>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
+                </div>
+              </div>
+            </div>
           </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </td>
-</tr>
-
-        <tr>
-         
-          <th scope="row" class="loaded-data-table-cell">Alaska</th>
-          <td class="loaded-data-table-cell">2007-2019</td>
-          <td class="loaded-data-table-cell">06/03/22</td>
-          <td class="loaded-data-table-cell">
-            <!--Trigger/Open the modal -->
-            <button type="button" class="etl-button" data-toggle="modal" data-target="#AKModal">Alaska ETL Evaluations</button>
-
-            <!-- The Modal -->
-            <div class="modal fade" id="AKModal" tabindex="-1" role="dialog" aria-labelledby="AKModalTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="AKModalTitle">Evaluation Group Descriptions</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <ol>
-              <li><b>ALASKA 2017 (Coastal):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM</li>
-              <li><b>ALASKA 2018 (Coastal):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM</li>
-              <li><b>ALASKA 2019 (Coastal):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, AREA CHANGE, GROWTH, REMOVALS, MORTALITY, DWM</li>
-              <li><b>ALASKA 2019 (Interior):</b> ALL AREA, CURRENT AREA, CURRENT VOLUME, DWM, GROUND LAYER</li>
-            </ol>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-          </td>
-        </tr>
+        </td>
+      </tr>
 
         <tr>
  
@@ -2866,10 +2855,6 @@
     </td>
   </tr>
 </table>
+</div>
 </body>
-
-
-</div>
-</div>
-
 </html>

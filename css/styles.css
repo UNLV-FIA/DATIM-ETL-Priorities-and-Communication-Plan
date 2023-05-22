@@ -66,6 +66,11 @@ h6{
   padding: 0rem;
 }
 
+.table {
+  border-left: 1px solid #DEE2E6 !important;
+  border-right: 1px solid #DEE2E6 !important;
+}
+
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
