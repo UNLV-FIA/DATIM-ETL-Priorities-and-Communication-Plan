@@ -145,7 +145,7 @@ h6{
   color: white !important;
 }
 
-.pagesBtnClass{
+.pages-btn-class{
   margin-bottom: 5px;
   margin-right: 10px;
   border-radius:5px;
@@ -155,14 +155,14 @@ h6{
   width: 14rem;
 }
 
-.pagesBtnClass:hover{
+.pages-btn-class:hover{
   background-color:#788952;
   transition: 120ms;
   color:black;
   border-color: black;
 }
 
-.pagesBtnClass:focus {
+.pages-btn-class:focus {
   background-color: #49572a;
   transition: 120ms;
   color:#FFB733;
@@ -172,4 +172,18 @@ h6{
 
 .remove-table-hover tr:hover{
   background-color: unset !important;
+}
+
+.footer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #49572a;
+  color: #fff;
+}
+.footer-list-items{
+  list-style: none;
+  margin-right: 15px;
 }
