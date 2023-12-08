@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -65,6 +66,8 @@
         with (theDate) {
         document.write("<i>Website last updated: "+weekday[getDay()]+', '+months[getMonth()]+' '+getDate()+', '+d.getFullYear()+' '+getHours()+':'+getMinutes()+" PST</i>")
         }
+        
+        RetrieveLoadedDataAsync();
       </script>
       <p>
         The DATIM team prioritizes data extractions, transformations, and loads (ETLs) based on the
@@ -95,10 +98,10 @@
       </thead>
       <tbody>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Alabama</th>
-        <td class="loaded-data-table-cell">2000-2022</td>
-        <td class="loaded-data-table-cell">01/07/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Alabama</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ALModal">Alabama ETL Evaluations</button>
           <!-- The Modal -->
@@ -112,8 +115,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -125,10 +127,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Alaska</th>
-        <td class="loaded-data-table-cell">2007-2019</td>
-        <td class="loaded-data-table-cell">06/03/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Alaska</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#AKModal">Alaska ETL Evaluations</button>
           <!-- The Modal -->
@@ -142,8 +144,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -155,10 +156,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Arizona</th>
-        <td class="loaded-data-table-cell">2001-2019</td>
-        <td class="loaded-data-table-cell">10/29/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Arizona</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#AZModal">Arizona ETL Evaluations</button>
           <!-- The Modal -->
@@ -172,8 +173,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -185,10 +185,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Arkansas</th>
-        <td class="loaded-data-table-cell">2000-2020</td>
-        <td class="loaded-data-table-cell">05/06/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Arkansas</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ARModal">Arkansas ETL Evaluations</button>
           <!-- The Modal -->
@@ -202,8 +202,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -215,10 +214,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">California</th>
-        <td class="loaded-data-table-cell">2001-2019</td>
-        <td class="loaded-data-table-cell">09/23/20</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">California</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#CAModal">California ETL Evaluations</button>
           <!-- The Modal -->
@@ -232,8 +231,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -245,10 +243,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Colorado</th>
-        <td class="loaded-data-table-cell">2002-2019</td>
-        <td class="loaded-data-table-cell">10/29/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Colorado</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#COModal">Colorado ETL Evaluations</button>
           <!-- The Modal -->
@@ -262,8 +260,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -275,10 +272,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Connecticut</th>
-        <td class="loaded-data-table-cell">2003-2021</td>
-        <td class="loaded-data-table-cell">01/30/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Connecticut</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#CTModal">Connecticut ETL Evaluations</button>
           <!-- The Modal -->
@@ -292,8 +289,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -305,10 +301,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Delaware</th>
-        <td class="loaded-data-table-cell">2004-2021</td>
-        <td class="loaded-data-table-cell">01/30/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Delaware</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#DEModal">Delaware ETL Evaluations</button>
           <!-- The Modal -->
@@ -322,8 +318,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -335,10 +330,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Florida</th>
-        <td class="loaded-data-table-cell">2002-2019</td>
-        <td class="loaded-data-table-cell">07/07/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Florida</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#FLModal">Florida ETL Evaluations</button>
           <!-- The Modal -->
@@ -352,8 +347,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -365,10 +359,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Georgia</th>
-        <td class="loaded-data-table-cell">1997-2021</td>
-        <td class="loaded-data-table-cell">02/13/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Georgia</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#GAModal">Georgia ETL Evaluations</button>
           <!-- The Modal -->
@@ -382,8 +376,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -395,10 +388,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Hawaii</th>
-        <td class="loaded-data-table-cell">2010-2010</td>
-        <td class="loaded-data-table-cell">08/16/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Hawaii</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#HIModal">Hawaii ETL Evaluations</button>
           <!-- The Modal -->
@@ -412,8 +405,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -425,10 +417,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Idaho</th>
-        <td class="loaded-data-table-cell">2004-2019</td>
-        <td class="loaded-data-table-cell">11/08/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Idaho</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#IDModal">Idaho ETL Evaluations</button>
         
@@ -443,8 +435,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -456,10 +447,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Illinois</th>
-        <td class="loaded-data-table-cell">2001-2021</td>
-        <td class="loaded-data-table-cell">11/16/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Illinois</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ILModal">Illinois ETL Evaluations</button>
         
@@ -474,8 +465,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -490,10 +480,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Indiana</th>
-        <td class="loaded-data-table-cell">1999-2021</td>
-        <td class="loaded-data-table-cell">12/12/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Indiana</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#INModal">Indiana ETL Evaluations</button>
         
@@ -508,8 +498,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -521,10 +510,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Iowa</th>
-        <td class="loaded-data-table-cell">1999-2021</td>
-        <td class="loaded-data-table-cell">03/22/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Iowa</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#IAModal">Iowa ETL Evaluations</button>
         
@@ -539,8 +528,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -552,10 +540,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Kansas</th>
-        <td class="loaded-data-table-cell">2001-2020</td>
-        <td class="loaded-data-table-cell">03/23/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Kansas</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#KSModal">Kansas ETL Evaluations</button>
         
@@ -570,8 +558,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                  </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -583,10 +570,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Kentucky</th>
-        <td class="loaded-data-table-cell">2000-2019</td>
-        <td class="loaded-data-table-cell">05/23/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Kentucky</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#KYModal">Kentucky ETL Evaluations</button>
         
@@ -601,8 +588,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -614,10 +600,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Louisiana</th>
-        <td class="loaded-data-table-cell">2001-2019</td>
-        <td class="loaded-data-table-cell">12/16/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Louisiana</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#LAModal">Louisiana ETL Evaluations</button>
         
@@ -632,8 +618,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -645,10 +630,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Maine</th>
-        <td class="loaded-data-table-cell">1999-2021</td>
-        <td class="loaded-data-table-cell">07/28/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Maine</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MEModal">Maine ETL Evaluations</button>
         
@@ -663,8 +648,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -676,10 +660,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Maryland</th>
-        <td class="loaded-data-table-cell">2004-2020</td>
-        <td class="loaded-data-table-cell">02/17/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Maryland</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MDModal">Maryland ETL Evaluations</button>
         
@@ -694,8 +678,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -707,10 +690,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Massachusetts</th>
-        <td class="loaded-data-table-cell">2003-2020</td>
-        <td class="loaded-data-table-cell">05/05/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Massachusetts</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MAModal">Massachusetts ETL Evaluations</button>
         
@@ -725,8 +708,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -738,10 +720,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Michigan</th>
-        <td class="loaded-data-table-cell">2000-2020</td>
-        <td class="loaded-data-table-cell">02/08/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Michigan</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MIModal">Michigan ETL Evaluations</button>
         
@@ -756,8 +738,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -772,10 +753,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Minnesota</th>
-        <td class="loaded-data-table-cell">1999-2021</td>
-        <td class="loaded-data-table-cell">08/04/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Minnesota</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MNModal">Minnesota ETL Evaluations</button>
         
@@ -790,8 +771,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -806,10 +786,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Mississippi</th>
-        <td class="loaded-data-table-cell">2006-2021</td>
-        <td class="loaded-data-table-cell">07/14/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Mississippi</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MSModal">Mississippi ETL Evaluations</button>
         
@@ -824,8 +804,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -840,10 +819,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Missouri</th>
-        <td class="loaded-data-table-cell">1999-2021</td>
-        <td class="loaded-data-table-cell">11/15/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Missouri</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MOModal">Missouri ETL Evaluations</button>
         
@@ -858,8 +837,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -874,10 +852,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Montana</th>
-        <td class="loaded-data-table-cell">2003-2019</td>
-        <td class="loaded-data-table-cell">11/02/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Montana</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MTModal">Montana ETL Evaluations</button>
         
@@ -892,8 +870,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -908,10 +885,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Nebraska</th>
-        <td class="loaded-data-table-cell">2001-2020</td>
-        <td class="loaded-data-table-cell">03/23/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Nebraska</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NEModal">Nebraska ETL Evaluations</button>
         
@@ -926,8 +903,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -942,10 +918,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Nevada</th>
-        <td class="loaded-data-table-cell">2004-2019</td>
-        <td class="loaded-data-table-cell">11/11/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Nevada</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NVModal">Nevada ETL Evaluations</button>
         
@@ -960,8 +936,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -976,10 +951,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">New Hampshire</th>
-        <td class="loaded-data-table-cell">2002-2021</td>
-        <td class="loaded-data-table-cell">02/01/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">New Hampshire</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NHModal">New Hampshire ETL Evaluations</button>
         
@@ -994,8 +969,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1010,10 +984,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">New Jersey</th>
-        <td class="loaded-data-table-cell">2004-2020</td>
-        <td class="loaded-data-table-cell">03/31/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">New Jersey</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NJModal">New Jersey ETL Evaluations</button>
         
@@ -1028,8 +1002,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1044,10 +1017,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">New Mexico</th>
-        <td class="loaded-data-table-cell">2005-2019</td>
-        <td class="loaded-data-table-cell">11/11/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">New Mexico</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NMModal">New Mexico ETL Evaluations</button>
         
@@ -1062,8 +1035,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1078,10 +1050,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">New York</th>
-        <td class="loaded-data-table-cell">2002-2020</td>
-        <td class="loaded-data-table-cell">06/07/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">New York</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NYModal">New York ETL Evaluations</button>
         
@@ -1096,8 +1068,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1111,10 +1082,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">North Carolina</th>
-        <td class="loaded-data-table-cell">2002-2022</td>
-        <td class="loaded-data-table-cell">08/07/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">North Carolina</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NCModal">North Carolina ETL Evaluations</button>
         
@@ -1129,8 +1100,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1144,10 +1114,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">North Dakota</th>
-        <td class="loaded-data-table-cell">2001-2021</td>
-        <td class="loaded-data-table-cell">03/21/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">North Dakota</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NDModal">North Dakota ETL Evaluations</button>
         
@@ -1162,8 +1132,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1180,10 +1149,10 @@
 
       <tr>
       
-        <th scope="row" class="loaded-data-table-cell">Ohio</th>
-        <td class="loaded-data-table-cell">2001-2021</td>
-        <td class="loaded-data-table-cell">08/04/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Ohio</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#OHModal">Ohio ETL Evaluations</button>
         
@@ -1198,8 +1167,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1213,10 +1181,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Oklahoma</th>
-        <td class="loaded-data-table-cell">2008-2020</td>
-        <td class="loaded-data-table-cell">08/07/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Oklahoma</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#OKModal">Oklahoma ETL Evaluations</button>
         
@@ -1231,8 +1199,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1248,10 +1215,10 @@
       </tr>
       <tr>
       
-        <th scope="row" class="loaded-data-table-cell">Oregon</th>
-        <td class="loaded-data-table-cell">2001-2019</td>
-        <td class="loaded-data-table-cell">09/18/20</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Oregon</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ORModal">Oregon ETL Evaluations</button>
         
@@ -1266,8 +1233,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                  </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1282,10 +1248,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Pennsylvania</th>
-        <td class="loaded-data-table-cell">2000-2021</td>
-        <td class="loaded-data-table-cell">02/08/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Pennsylvania</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#PennsylvaniaModal">Pennsylvania ETL Evaluations</button>
         
@@ -1300,8 +1266,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1316,10 +1281,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Rhode Island</th>
-        <td class="loaded-data-table-cell">2003-2021</td>
-        <td class="loaded-data-table-cell">02/01/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Rhode Island</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#RIModal">Rhode Island ETL Evaluations</button>
         
@@ -1334,8 +1299,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1350,10 +1314,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">South Carolina</th>
-        <td class="loaded-data-table-cell">1999-2021</td>
-        <td class="loaded-data-table-cell">03/24/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">South Carolina</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#SouthCarolinaModal">South Carolina ETL Evaluations</button>
         
@@ -1368,8 +1332,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1384,10 +1347,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">South Dakota</th>
-        <td class="loaded-data-table-cell">2001-2020</td>
-        <td class="loaded-data-table-cell">03/24/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">South Dakota</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#SouthDakotaModal">South Dakota ETL Evaluations</button>
         
@@ -1402,8 +1365,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1417,10 +1379,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Tennessee</th>
-        <td class="loaded-data-table-cell">1999-2019</td>
-        <td class="loaded-data-table-cell">01/13/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Tennessee</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#TennesseeModal">Tennessee ETL Evaluations</button>
         
@@ -1435,8 +1397,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1450,10 +1411,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Texas</th>
-        <td class="loaded-data-table-cell">2001-2021</td>
-        <td class="loaded-data-table-cell">10/26/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Texas</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#TexasModal">Texas ETL Evaluations</button>
         
@@ -1468,8 +1429,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1484,10 +1444,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Utah</th>
-        <td class="loaded-data-table-cell">2000-2019</td>
-        <td class="loaded-data-table-cell">10/31/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Utah</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#UtahModal">Utah ETL Evaluations</button>
         
@@ -1502,8 +1462,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1518,10 +1477,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Vermont</th>
-        <td class="loaded-data-table-cell">2003-2021</td>
-        <td class="loaded-data-table-cell">05/23/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Vermont</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#VermontModal">Vermont ETL Evaluations</button>
         
@@ -1536,8 +1495,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1551,10 +1509,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Virginia</th>
-        <td class="loaded-data-table-cell">1998-2021</td>
-        <td class="loaded-data-table-cell">03/24/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Virginia</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#exampleModalLong">Virginia ETL Evaluations</button>
         
@@ -1569,8 +1527,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1584,10 +1541,10 @@
         </td>
       </tr>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Washington</th>
-        <td class="loaded-data-table-cell">2002-2019</td>
-        <td class="loaded-data-table-cell">09/23/20</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Washington</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ModalWashington">Washington ETL Evaluations</button>
         
@@ -1602,8 +1559,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1618,10 +1574,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">West Virginia</th>
-        <td class="loaded-data-table-cell">2004-2021</td>
-        <td class="loaded-data-table-cell">05/23/23</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">West Virginia</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ModalWestVirginia">West Virginia ETL Evaluations</button>
         
@@ -1636,8 +1592,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1652,10 +1607,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Wisconsin</th>
-        <td class="loaded-data-table-cell">2000-2021</td>
-        <td class="loaded-data-table-cell">11/17/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Wisconsin</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#WisconsinModal">Wisconsin ETL Evaluations</button>
         
@@ -1670,8 +1625,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1686,10 +1640,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Wyoming</th>
-        <td class="loaded-data-table-cell">2011-2020</td>
-        <td class="loaded-data-table-cell">11/14/22</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Wyoming</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#WyomingModal">Wyoming ETL Evaluations</button>
         
@@ -1704,8 +1658,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                  </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1735,10 +1688,10 @@
     
       <tbody>
       <tr>
-        <th scope="row" class="loaded-data-table-cell">American Samoa</th>
-        <td class="loaded-data-table-cell">2001-2012</td>
-        <td class="loaded-data-table-cell">08/16/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">American Samoa</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#ASModal">American Samoa ETL Evaluations</button>
         
@@ -1753,8 +1706,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1765,10 +1717,10 @@
       </tr>
     
       <tr>    
-        <th scope="row" class="loaded-data-table-cell">Fed. St. Micronesia</th>
-        <td class="loaded-data-table-cell">2005-2016</td>
-        <td class="loaded-data-table-cell">08/26/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Fed. St. Micronesia</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#FSMModal">Federated States of Micronesia ETL Evaluations</button>
         
@@ -1783,8 +1735,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1795,10 +1746,10 @@
       </tr>
     
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Guam</th>
-        <td class="loaded-data-table-cell">2002-2013</td>
-        <td class="loaded-data-table-cell">08/25/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Guam</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#GModal">Guam ETL Evaluations</button>
         
@@ -1813,8 +1764,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1826,10 +1776,10 @@
       </tr>
           
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Marshall Islands</th>
-        <td class="loaded-data-table-cell">2008-2018</td>
-        <td class="loaded-data-table-cell">10/25/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Marshall Islands</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#MSIModal">Marshall Islands ETL Evaluations</button>
         
@@ -1844,8 +1794,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1860,10 +1809,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Northern Mariana Islands</th>
-        <td class="loaded-data-table-cell">2004-2015</td>
-        <td class="loaded-data-table-cell">08/17/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Northern Mariana Islands</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#NMIModal">Northern Mariana Islands ETL Evaluations</button>
         
@@ -1878,8 +1827,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1891,10 +1839,10 @@
       </tr>
 
       <tr>
-        <th scope="row" class="loaded-data-table-cell">Palau</th>
-        <td class="loaded-data-table-cell">2003-2014</td>
-        <td class="loaded-data-table-cell">08/17/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Palau</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#PModal">Palau ETL Evaluations</button>
         
@@ -1909,8 +1857,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1923,10 +1870,10 @@
     
       <tr>
 
-        <th scope="row" class="loaded-data-table-cell">Puerto Rico</th>
-        <td class="loaded-data-table-cell">2001-2019</td>
-        <td class="loaded-data-table-cell"> 01/06/21</td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">Puerto Rico</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A</td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#PRModal">Puerto Rico ETL Evaluations</button>
         
@@ -1941,8 +1888,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
@@ -1954,10 +1900,10 @@
       </tr>
     
       <tr>
-        <th scope="row" class="loaded-data-table-cell">US Virgin Islands</th>
-        <td class="loaded-data-table-cell">2004-2019</td>
-        <td class="loaded-data-table-cell"> 11/26/19 </td>
-        <td class="loaded-data-table-cell">
+        <th scope="row" class="loaded-data-table-cell stateCell">US Virgin Islands</th>
+        <td class="loaded-data-table-cell rangeCell">N/A</td>
+        <td class="loaded-data-table-cell loadCell">N/A </td>
+        <td class="loaded-data-table-cell evaluationsCell">
           <!--Trigger/Open the modal -->
           <button type="button" class="etl-button" data-toggle="modal" data-target="#USVIModal">US Virgin Islands ETL Evaluations</button>
         
@@ -1972,8 +1918,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <ol>
-                  </ol>
+                  <ol>No evaluations available</ol>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close</button>
