@@ -1,6 +1,6 @@
 function RetrieveLoadedDataAsync() {
     // const baseAddress = "http://localhost:50452/"; // for local testing
-    const baseAddress = "http://datimdev.fia.unlv.edu/DATIM/";
+    const baseAddress = "https://apps.fs.usda.gov/datim/";
     const targetEndpoint = "endPoints/atim/RetrieveLoadedData.ashx";
     let fullTargetEndpoint = baseAddress + targetEndpoint;
     
